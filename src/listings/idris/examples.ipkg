@@ -1,0 +1,14 @@
+package examples
+
+modules = Sleep
+        , Game
+        , Checkout
+        , Main
+
+main = Main
+executable = examples
+
+pkgs = contrib
+     , effects
+
+modules = Game

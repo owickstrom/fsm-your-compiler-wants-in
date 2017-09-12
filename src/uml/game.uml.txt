@@ -1,0 +1,16 @@
+@startuml
+!include src/uml/styles.iuml
+
+state Standing
+state Ducking
+state Jumping
+
+[*] -right-> Standing
+
+Standing -right-> Ducking : Press Down
+Standing -right-> Jumping : Press Space
+Ducking -left-> Standing : Release Down
+Ducking -right-> Jumping : Press Space
+Jumping -down-> Standing : (Hit Ground)
+
+@enduml

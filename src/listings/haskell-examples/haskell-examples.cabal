@@ -1,0 +1,31 @@
+name:                haskell-examples
+version:             0.1.0.0
+synopsis:            Examples for "Finite-state machines? Your compiler wants in!"
+license:             MPL-2.0
+license-file:        LICENSE
+author:              Oskar Wickström
+maintainer:          oskar.wickstrom@gmail.com
+copyright:           Oskar Wickström
+build-type:          Simple
+cabal-version:       >=1.10
+
+library
+  hs-source-dirs:      src
+  default-language:    Haskell2010
+  exposed-modules:     Checkout
+                     , Checkout.ADT
+                     , Checkout.MTLStyle
+                     , Checkout.PaymentProvider
+                     , Prompt
+  build-depends:       async
+                     , base >= 4.7 && < 5
+                     , bytestring
+                     , lifted-async
+                     , lifted-base >= 0.2.3.11
+                     , monad-control >= 1.0.2.2
+                     , mtl
+                     , text
+                     , transformers >= 0.5.2.0
+                     , transformers-base >= 0.4.4
+                     , unordered-containers
+  ghc-options: -Werror -Wall -fwarn-tabs
